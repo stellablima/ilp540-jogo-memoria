@@ -1,0 +1,17 @@
+body{
+    background-color: rebeccapurple;
+}
+
+main{
+    background-color: peachpuff;
+    width: 800px;
+    height: 500px;
+    margin-left: 15%;
+}
+
+.card{
+    background-color: salmon;
+    width: 100px;
+    height: 150px;
+    margin: 10px;
+}

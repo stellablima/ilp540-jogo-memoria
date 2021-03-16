@@ -1,0 +1,30 @@
+///github
+
+copiar o projeto na maquina:
+git clone <url do projeto>
+
+toda vez que for começar a alterar o codigo na maquina:
+git pull
+
+subir seu código no git:
+git push
+
+
+branch, tbm podemos trabalhar com branchs uma vez o escopo
+definido quem tiver no design faz uma branch pra isso e 
+depois da merge, na branch principal, o mesmo pra js
+
+criar nova branch:
+git branch nome-branch
+
+acessar a branch:
+git checkout nome-branch
+
+para criar e acessar uma vez (primeir vez):
+git checkout -b nome-branch
+
+
+
+
+niveis
+tela inciial
