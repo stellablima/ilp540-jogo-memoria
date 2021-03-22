@@ -20,8 +20,46 @@ git branch nome-branch
 acessar a branch:
 git checkout nome-branch
 
-para criar e acessar uma vez (primeir vez):
+para criar e acessar de uma vez (primeira vez):
 git checkout -b nome-branch
+
+remover branch local:
+git checkout main
+git branch -d nome-branch (para forçar, prendendo commits e histórico, git branch -D nome-branch)
+
+remover branch remota:
+git push origin --delete nome-branch
+        ou
+git push origin :nome-branch 
+
+apos concluir seu trabalho com a nome-branch, pode fazer o merge 
+na master, o merge pega ultimo commit da nome-branch
+e da um commit na master, tranferindo de uma vez todas as alterarções
+(sem o histórico de commits da nome-branch na main).
+
+git checkout nome-branch  # indo para nome-branch
+git merge master          # fazendo o merge entre nome-branch e o master
+
+ou rebase, ele fundi literalmente a master com a nome-branch somando
+o historico de commits da nome-branch à branch master, gerando
+uma branch linear e preservando o histórico de commits na main.
+
+git checkout nome-branch  # indo para o branch nome-branch
+git rebase master         # fazendo o rebase entre nome-branch e o master
+
+//////////////////////////////////////
+merge de fast-forward:
+git checkout nome-branch
+//git rebase master //se main tbm foi commitada durante as modificações da nome-branch
+git checkout master
+git merge nome-branch 
+git branch -d nome-branch
+
+no fast-forward(gera um commit de mesclagem para manter histórico):
+git merge --no-ff
+
+
+
 
 para reverter um commit na branch x
 git revert x
@@ -39,5 +77,6 @@ git reset x --hard
 
 
 
+//////para o jogo/////////////////////
 niveis
 tela inciial
