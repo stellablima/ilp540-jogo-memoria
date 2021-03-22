@@ -23,6 +23,19 @@ git checkout nome-branch
 para criar e acessar uma vez (primeir vez):
 git checkout -b nome-branch
 
+para reverter um commit na branch x
+git revert x
+
+resetar todos os commits de um arquivo.txt
+git reset arquivo.txt
+
+resetar todos os commits da branch x
+git reset x
+
+resetar todos os commits e apagar modificações nos arquivos da branch x
+git reset x --hard
+
+
 
 
 
