@@ -24,10 +24,14 @@ function sorteioDeMotivos(tabela, linha, coluna, dificuldade){
 
   motivosPossiveis = motivosPossiveis.slice(0,dificuldade);
   console.log("motivosPossiveis  :"+motivosPossiveis);
-  
-  for(let i = 0 ; i < qtdCelulas; i++){
-    motivosDoJogo.push(motivosPossiveis[i%dificuldade]);//Math.floor(i/dificuldade)
-  }
+  //async function a() { //arrr :(
+    for(let i = 0 ; i < (qtdCelulas/2); i++){
+      motivosDoJogo.push(motivosPossiveis[i%dificuldade]);//Math.floor(i/dificuldade)
+      motivosDoJogo.push(motivosPossiveis[i%dificuldade]);
+    }
+  //}
+  //await a();
+ 
   console.log("motivosDoJogo  :"+motivosDoJogo);
 
 
@@ -47,12 +51,10 @@ function sorteioDeMotivos(tabela, linha, coluna, dificuldade){
   }
 }
 
-//usando uma classe de um jeito maluco pra empilhar dados, sem get ou set
-//depois pode ter construtor e metodos de sobrecarga, ou substituir por outra logica melhor
 function preConfiguracao(){
-  var c = 6
-  var l = 5
-  var diff = 5;
+  var c = 7
+  var l = 3
+  var diff = 5; //1-5
   var jogo = new Object();
   jogo.coluna = c;
   jogo.linha = l;
@@ -60,9 +62,18 @@ function preConfiguracao(){
   return jogo
 }
 
+async function startGame(){
+  for (const key in document.getElementsByClassName('cell')) {
+    document.getElementsByClassName('cell')[key].onclick = ()=>alert('clicado ' +  this.Element.id);
+  }
+}
 
 window.onload = async function () {
   var preConfig = await preConfiguracao();
   await criarCartas(document.querySelector('#app'),preConfig.linha, preConfig.coluna);
   await sorteioDeMotivos(document.getElementById('tabuleiro'),preConfig.linha, preConfig.coluna, preConfig.dificuldade);
+  await startGame();
+  await setTimeout(() => {
+    document.getElementById('loading').style.display = "none";
+  }, 1000);
 }
