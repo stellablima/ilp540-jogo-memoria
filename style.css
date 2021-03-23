@@ -15,3 +15,27 @@ main{
     height: 150px;
     margin: 10px;
 }
+
+.cell{
+    border: 1px solid #555;
+    width: 50px;
+    height: 80px;
+    line-height: 25px;
+    text-align: center;
+    background-color: rgb(197, 69, 114);
+  }
+  .cellStart{
+    background-color: rgb(255, 0, 0);
+  }
+  .cellPassagem{
+    background-color: rgb(0, 255, 0);
+  }
+  .cellPorta{
+    background-color: rgb(255, 255, 0);
+  }
+  .cellLivre{
+    background-color: rgb(162, 0, 255);
+  }
+  .cellNull{
+    background-color: rgb(0, 0, 0);
+  }
