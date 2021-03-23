@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 function criarCartas(el, linha, coluna) {
   const rows = [];
   for (let i = 0; i < linha ; i++) {
@@ -77,3 +78,6 @@ window.onload = async function () {
     document.getElementById('loading').style.display = "none";
   }, 1000);
 }
+=======
+alert('hello world');
+>>>>>>> parent of e173c2c (logica de sorteios de cartas)

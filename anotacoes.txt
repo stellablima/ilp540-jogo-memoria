@@ -80,5 +80,3 @@ git reset x --hard
 //////para o jogo/////////////////////
 niveis
 tela inciial
-implementar tabela no front e array no back para jogo 
-da memoria baseado no codigo do projeto detetive
